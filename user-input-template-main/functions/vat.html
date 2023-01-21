@@ -1,43 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-    
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Conversion Calculator</title>
-        <link rel="stylesheet" href="../css/style.css">
-    
-    </head>
-    
-    <body>
-        
-        <h1 id="title">
-            VAT Calculator
-        </h1>
 
-        <div id="app">
-            View the answer in the console
-        </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversion Calculator</title>
+    <link rel="stylesheet" href="../css/style.css">
 
-        <!-- Start of Script -->
-        <script>
-            
-            // VAT constant:
-            const vat = 14;
+</head>
 
-            // Get user input and save to variable
-                // code here..
+<body>
 
-            // Perform calculation here
-            let result;// save result of calculation to answer variable.
+    <h1 id="title">
+        VAT Calculator
+    </h1>
 
-            // log VAT out to consol, DOM, or alert
-            console.log("The VAT of entered amount is " + result);
+    <div id="app">
+        View the answer in the console
+    </div>
 
-        </script>
-        <!-- End of Script -->
+    <!-- Start of Script -->
+    <script>
 
-    </body>
+        // VAT constant:
+        const vat = 15;
+
+        // Get user input and save to variable
+        const vatInput = parseInt(prompt("Please enter the amount you would like to add the VAT to.")); // used a prompt function to get the users input and then also wrapped the result into another built-in function that changes the data type into an interger. 
+
+        // Perform calculation here
+        let result = vatInput * vat / 100 + vatInput;// save result of calculation to answer variable.
+
+        // log VAT out to consol, DOM, or alert
+
+        console.log("The VAT of entered amount is " + result);
+        let vatAmount = document.getElementById("app").innerHTML = "Your new total with VAT included is: " + result; // used the innerHTML method to update the result to the DOM so that the user can see the result of the calculation.
+    </script>
+    <!-- End of Script -->
+
+</body>
 
 </html>
