@@ -25,19 +25,22 @@
 
         // step 1
         // Create const for conversion
-
+        const conversion = 1.609344;
 
         // step 2
         // Get user input and save to variable
+        const userKMinput = parseInt(prompt("Enter KM's to be converted to Miles"));
 
 
         // step 3
         // Perform calculation and save result
+        const result = Math.round(userKMinput / conversion);
 
 
         // step 4
         // Display result in DOM, alert or console
-        console.log("The distance of " + /*<<input var>>*/ + "km after being converted is " + /*<<result var>>*/ + " in miles");
+        console.log("The distance of " + userKMinput + "km after being converted is " + result + " in miles");
+        let milesResult = document.getElementById("app").innerHTML = "The distance of " + userKMinput + "km after being converted is " + result + " in miles";
 
         </script>
         <!-- End of Script -->

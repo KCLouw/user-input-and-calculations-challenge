@@ -28,10 +28,9 @@
             let varTwo = prompt("Enter second variable");
 
             // Swapping values:
-            /*
-                Replace these comments and text with logic and code
-                that will swap the values of varOne and varTwo
-            */
+            let varTemp = varOne; // Assigned the first variable to a new temporary variable, then assigned the second variable to the first variable. Lastly assigned the temporary variable to the second variable so the values are updating with values of other varibles as the script runs.
+            varOne = varTwo;
+            varTwo = varTemp;
 
             // Printing results:
             console.log("The value of varOne after swapping is: " + varOne);
